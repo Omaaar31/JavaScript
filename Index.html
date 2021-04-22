@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.3/marked.min.js" integrity="sha512-t1jq1b5U4hgz4lQoeyRD9QiVu99KxjyA939fnND+R+gLOHmuT5F9YFHJI1Nse1B1QG6/U11SPAc8fshYshb6MA==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Untitled-1.css">
+    <title>DOM</title>
+</head>
+<body>
+<!--
+    <div class="boxbar">
+        <div class="bar">
+        </div>
+    </div>
+
+    <h1>C'est parti allons-y</h1>
+
+   
+    <h2 id="titre">DOM1</h2>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+    <a href="#"></a>
+
+    <label for="name">Nom</label>
+    <input type="text" id="name" size="20">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+    
+    <h1 id="titre">DOM2</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+    <a href="#"></a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <h1 id="titre">DOM3</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+    <a href="#"></a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <h1 id="titre">DOM4</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+    <a href="#"></a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <h1 id="titre">DOM5</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+    <a href="#"></a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <h1 id="titre">DOM6</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+    <a href="#"></a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <h1 id="titre">DOM7</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+    <a href="#"></a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <h1 id="titre">DOM8</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+    <a href="#"></a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <h1 id="titre">DOM9</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+    <a href="#"></a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <h1 id="titre">DOM10</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+    <a href="#"></a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <h1 id="titre">DOM11</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+    <a href="#"></a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <h1 id="titre">DOM12</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+    <a href="#"></a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum urna, 
+    dapibus nec est id, lacinia pretium risus. Praesent tristique laoreet arcu, 
+    sed mollis turpis finibus varius. Suspendisse at purus nec mauris fringilla volutpat. 
+    Vestibulum at urna in quam eleifend laoreet quis tempus purus. Donec a semper eros. 
+    Aenean sodales condimentum nisl tempus iaculis. Praesent scelerisque, magna condimentum vehicula 
+    ultrices, augue massa tempus nunc, nec auctor tortor tortor quis odio. Sed in lectus neque. 
+    Mauris semper fermentum leo, quis posuere augue egestas et. Suspendisse pretium auctor orci, 
+    id pellentesque ante euismod non. Vestibulum orci metus, gravida at pretium in, 
+    venenatis ut velit. Etiam ac aliquam justo.</p>
+
+    <form>
+        <textarea name="txt" id="txt" cols="30" rows="10"></textarea>
+        <button>Cliquer </button>
+    </form>
+
+    <a href="#">Ajouter</a>
+    <a href="#">Suppr</a>
+    <a href="#">ON/OFF</a>
+    
+    <img src="https://www.fillmurray.com/1080/1080">
+    <img src="https://loremflickr.com/1080/1080">
+    <img src="https://placekitten.com/1080/1080">
+    <img src="http://placeimg.com/1080/1080/any">
+    <img src="https://placebear.com/1080/1080">
+    <img src="https://www.stevensegallery.com/1080/1080">
+    <img src="https://picsum.photos/1080/1080">
+    <img src="https://loremflickr.com/g/1080/1080/paris">
+    <img src="https://loremflickr.com/1080/1080/dog">
+    <img src="https://loremflickr.com/1080/1080/dog">
+-->
+
+
+<textarea name="txt" id="txt" cols="30" rows="10"></textarea>
+
+
+<!--
+
+
+<form>
+    <input type="text" name="text" id="txt" placeholder="Tapez un truc">
+    <button>Envoyer</button>
+</form>
+-->
+<script src="https://rawgit.com/WeiChiaChang/Easter-egg/master/easter-eggs-collection.js"></script>
+<script src="main(DOM).js" defer></script>
+<script src="main(Class).js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+/*
+.maCouleur{
+    color: blueviolet;
+}
+
+#titre{
+    display: none;
+}
+
+
+body{
+    min-height: 5000px;
+}
+
+.boxbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 5px solid;
+    border-color: burlywood;
+}
+
+.bar{
+    height: 20px;
+    width: 0;
+    background: crimson;
+}
+
+* {
+    transition: 1s;
+}
+h1 {
+    text-align: center;
+    margin-top: 120px;
+    opacity: 0;
+    cursor:pointer;
+}
+*/
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(14, 231, 231);
+    color: darkgrey;
+}
+
+h1{
+    transform: rotate(5deg);
+}
+
+#counter{
+    font-size: 8em;
+    margin: 0;
+    filter: blur(31px);
+    transition: 200ms;
+}
